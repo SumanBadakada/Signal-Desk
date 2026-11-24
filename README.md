@@ -16,3 +16,5 @@ Open `http://localhost:8000`. The first launch researches an agency reporting sc
 Discovery reads the Cloud Services section of Awesome ETL. Evidence checks use selected vendor-maintained documents on GitHub. Unknown means the collected sources do not establish support. Coverage counts individual capabilities and does not certify a complete pipeline.
 
 The versioned API is documented at `/docs`. SQLite stores runs, source snapshots, and reviews in `.signal-data/` (override with `SIGNAL_DATA`). A background worker resumes interrupted runs. Use Python 3.11+ on Linux or macOS. Use locally or behind authenticated internal access before sharing.
+
+Run the public battlecard library with `streamlit run streamlit_app.py`. **Find and add companies** searches public directories or accepts a manually sourced card. The 40 supplied comparisons are bundled with the app. Added cards use the workspace SQLite database and can be downloaded as JSON. Use persistent storage to retain additions across host resets.

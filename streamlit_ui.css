@@ -52,3 +52,34 @@
  .sd-stat span { font-size:.7rem; line-height:1.25; }
  .sd-stat { padding:.65rem .5rem; }
 }
+
+/* Battlecards follow the navy and cobalt comparison pages in the source deck. */
+.bc-cover {padding:clamp(1.3rem,3vw,2.4rem); border-radius:14px; border-left:5px solid #5297ff;
+ background:linear-gradient(110deg,#132a56,#1e447e); color:#fff;}
+.bc-cover .sd-label {color:#b5d9ff}
+.bc-cover h1 {color:white; font-size:clamp(1.75rem,3.7vw,3.2rem);letter-spacing:-.05em;line-height:1.12;padding:.45rem 0 .55rem;overflow-wrap:anywhere}
+.bc-cover h1 span {font-size:.53em;font-weight:500;color:#b5d9ff}
+.bc-cover p {font-size:1rem;line-height:1.5;margin:0;color:#e2efff;max-width:70ch}
+.bc-notes {border:1px solid #d4dee9; background:white;color:#1c3043; padding:1.15rem 1.3rem;border-radius:10px}
+.bc-notes h3 {font-size:1.08rem;line-height:1.4; padding:0 0 .55rem; color:#193966}
+.bc-notes ul {margin:0;padding:0 0 0 1.1rem}
+.bc-notes li {margin:.65rem 0;line-height:1.55;overflow-wrap:anywhere}
+.bc-notes li::marker {color:#4778bd}
+.bc-table {overflow:auto;border:1px solid #ccd9e6;border-radius:10px;max-width:100%}
+.bc-table table {width:100%;table-layout:fixed;border-collapse:collapse;min-width:470px;font-size:.88rem;color:#203348}
+.bc-table th,.bc-table td {text-align:left;padding:.75rem .9rem;vertical-align:top;overflow-wrap:anywhere;border-bottom:1px solid #dbe3eb}
+.bc-table thead th {background:#19375c;color:#fff}.bc-table thead th:first-child {width:26%}
+.bc-table tbody th {color:#17385e;font-weight:650}.bc-table tr {background:#fff}.bc-table tr:nth-child(even){background:#f1f6fa}
+.bc-missing {color:#64798d}
+.bc-cover {display:flex;align-items:center;justify-content:space-between;gap:1.8rem}
+.bc-cover h1 {margin:.35rem 0 .6rem}
+.bc-map {margin:0;min-width:13rem;flex:0 1 16rem;background:#19335a;border:1px solid #547099;border-radius:10px;padding:.65rem 1rem}
+.bc-plot {height:5.5rem;position:relative;border-left:1px solid #92abca;border-bottom:1px solid #92abca;
+ background:linear-gradient(90deg,transparent 49.8%,#526981 50%,transparent 50.2%),linear-gradient(transparent 49%,#526981 50%,transparent 51%)}
+.bc-dot {width:10px;height:10px;border-radius:50%;position:absolute;transform:translate(-50%,50%)}
+.bc-dot.mdi,.bc-map .mdi::before {background:#86e4cd}
+.bc-dot.vendor,.bc-map .vendor::before {background:#ffbc80}
+.bc-map figcaption {font-size:.72rem;display:flex;flex-wrap:wrap;gap:.6rem;color:#edf3fa}
+.bc-map figcaption span::before {content:"";display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:.3rem}
+.bc-axis {font-size:.69rem;color:#d2e2fa}.bc-axis.right {text-align:right;margin-bottom:.35rem}
+@media(max-width:750px){.bc-cover{display:block}.bc-map{max-width:22rem;margin-top:1rem}}

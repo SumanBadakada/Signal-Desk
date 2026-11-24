@@ -14,6 +14,7 @@ from pathlib import Path
 
 import streamlit as st
 
+from battlecard_ui import battlecards
 from app import DATA, SCENARIO, database, enqueue, fingerprint, research
 from research import DEFAULT, LABELS
 
@@ -46,7 +47,7 @@ def gate():
     if entered:
         if hmac.compare_digest(entered.encode(), password.encode()):
             st.session_state.authed = True
-            st.rerun()
+            return
         st.error("Incorrect password")
     st.stop()
 
@@ -189,12 +190,18 @@ def research_overview(run):
 
 def main():
     st.html(Path(__file__).with_name("streamlit_ui.css"))
+    if "open_company" in st.session_state:
+        st.session_state.card_selection = st.session_state.pop("open_company")
+        st.session_state.workspace_view = "Battlecard library"
+    with st.sidebar:
+        st.html(f'<div class="sd-brand">{wordmark()} Signal Desk</div>')
+        view = st.radio("Workspace", ["Battlecard library", "Find and add companies", "Workflow research"], key="workspace_view")
+    if view != "Workflow research":
+        battlecards(gate, view)
+        return
     gate()
     init_db()
     process_pending()
-
-    with st.sidebar:
-        st.html(f'<div class="sd-brand">{wordmark()} Signal Desk</div>')
     heading, action = st.columns([3, 1], vertical_alignment="center")
     with heading:
         st.html(f'<div class="sd-heading">{wordmark()} Signal Desk <span>Competitor research</span></div>')
