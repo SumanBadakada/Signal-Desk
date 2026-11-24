@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Signal Desk · Competitor discovery</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <i class="mark" aria-hidden="true"><b></b><b></b><b></b><b></b></i
+        >Signal Desk
+      </div>
+      <div class="workspace">iPaaS intelligence</div>
+      <button id="history" class="quiet">Run history</button>
+    </header>
+    <main>
+      <div class="crumb">Workspace <span>/</span> Competitor discovery</div>
+      <section class="intro">
+        <div>
+          <h1>Competitor discovery</h1>
+          <p>
+            Find integration vendors and check the evidence behind each match.
+          </p>
+        </div>
+        <button class="primary" id="new">＋ New research</button>
+      </section>
+      <p id="message" role="status" hidden></p>
+      <section class="brief">
+        <div class="brief-body">
+          <div class="eyebrow"><span class="beacon"></span> Research brief</div>
+          <h2 id="title">Loading research…</h2>
+          <div id="chips" class="chips"></div>
+        </div>
+        <div class="radar" aria-hidden="true"><i></i><b></b><em></em></div>
+      </section>
+      <section class="metrics" aria-label="Research summary">
+        <div>
+          <small>Candidates discovered</small><strong id="candidates">—</strong>
+        </div>
+        <div>
+          <small>With supporting evidence</small
+          ><strong id="supported">—</strong>
+        </div>
+        <div>
+          <small>Requirements to match</small
+          ><strong id="requirements">—</strong>
+        </div>
+      </section>
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Candidate shortlist</h2>
+            <p id="caption">Fetching research results…</p>
+          </div>
+          <div class="switch" aria-label="Result view">
+            <button id="list" aria-pressed="true">List</button
+            ><button id="matrix" aria-pressed="false">Compare</button>
+          </div>
+        </div>
+        <div id="results" class="scroll"></div>
+      </section>
+    </main>
+    <dialog id="modal">
+      <div class="modal-head">
+        <h2 id="modal-title"></h2>
+        <button id="close" aria-label="Close dialog">×</button>
+      </div>
+      <div id="modal-body"></div>
+    </dialog>
+  </body>
+</html>
