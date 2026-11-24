@@ -2,6 +2,8 @@
 
 A single-workspace competitor research tool for iPaaS sales and product teams.
 
+[Deploy to Render](https://render.com/deploy?repo=https://github.com/SumanBadakada/Signal-Desk) and grant Render access to this repository. Once the service is live, open its URL and sign in as `analyst` with the generated `SIGNAL_PASSWORD` from the service’s Environment settings. The free instance sleeps when idle, and its local research history can reset on restart or redeploy.
+
 ```sh
 python3 -m venv .venv
 . .venv/bin/activate

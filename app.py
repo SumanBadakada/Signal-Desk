@@ -1,5 +1,7 @@
+import base64
 import fcntl
 import hashlib
+import hmac
 import json
 import logging
 import os
@@ -9,7 +11,7 @@ import uuid
 from contextlib import asynccontextmanager, contextmanager
 from pathlib import Path
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.responses import PlainTextResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator
@@ -153,6 +155,24 @@ async def lifespan(app):
 
 
 app = FastAPI(title="Signal Desk", version="1", lifespan=lifespan)
+
+
+@app.middleware("http")
+async def protect_shared_workspace(request: Request, call_next):
+    password = os.environ.get("SIGNAL_PASSWORD")
+    if password and request.url.path != "/healthz":
+        scheme, _, credentials = request.headers.get("Authorization", "").partition(" ")
+        expected = base64.b64encode(f"analyst:{password}".encode())
+        if scheme.lower() != "basic" or not hmac.compare_digest(credentials.encode(), expected):
+            return Response(status_code=401, headers={"WWW-Authenticate": 'Basic realm="Signal Desk"'})
+    return await call_next(request)
+
+
+@app.get("/healthz", include_in_schema=False)
+def health():
+    with database() as conn:
+        conn.execute("SELECT id FROM runs LIMIT 1").fetchone()
+    return {"status": "ok"}
 
 
 @app.get("/api/v1/workspace")
