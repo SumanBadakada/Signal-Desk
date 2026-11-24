@@ -30,13 +30,17 @@ def library():
             "CREATE TABLE IF NOT EXISTS company_cards (id TEXT PRIMARY KEY, body TEXT NOT NULL)"
         )
         additions = db.execute("SELECT id, body FROM company_cards").fetchall()
-    return {**supplied(), **{row["id"]: json.loads(row["body"]) for row in additions}}
+    cards = supplied().copy()
+    for row in additions:
+        key=row["id"]
+        cards["analyst:"+key if key in cards else key]=json.loads(row["body"])
+    return cards
 
 
 def save_card(card, previous=None):
     key = identity(card["name"])
     body = json.dumps(card, ensure_ascii=False)
-    if not key or key in supplied():
+    if not key or (key in supplied() and previous is None):
         raise ValueError("A supplied card already uses that company name.")
     with database() as db:
         if previous is not None:

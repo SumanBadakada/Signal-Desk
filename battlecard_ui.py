@@ -5,6 +5,8 @@ from html import escape
 import json
 import streamlit as st
 
+from product_monitor import feeds
+
 from battlecards import (
     directory_entries,
     draft_from_directory,
@@ -12,6 +14,7 @@ from battlecards import (
     library,
     matching,
     save_card,
+    supplied,
     valid_link,
     wikipedia,
 )
@@ -194,7 +197,8 @@ def editor(initial, gate, previous=None):
         except ValueError as exc:
             st.error(str(exc))
             return
-        st.session_state.open_company = identity(name)
+        key = identity(name)
+        st.session_state.open_company = "analyst:" + key if key in supplied() else key
         st.rerun()
 
 
@@ -277,7 +281,8 @@ def battlecards(gate, view):
     selected = st.selectbox(
         f"Battlecard library · {len(cards)} companies",
         sorted(cards),
-        format_func=lambda k: cards[k]["name"],
+        format_func=lambda k: cards[k]["name"]
+        + (" · Analyst card" if k.startswith("analyst:") else ""),
         key="card_selection",
     )
     card = cards[selected]
@@ -295,13 +300,16 @@ def battlecards(gate, view):
         st.caption(
             f"Source: {card['source']} · Pricing, ratings and competitive claims reflect the supplied card."
         )
-    overview, features, price, reviews = st.tabs(
-        ["Positioning", "Capabilities", "Pricing", "Customer voice"]
+    overview, features, price, reviews, references = st.tabs(
+        ["Brief", "Product", "Pricing", "Reviews", "Sources"]
     )
     with overview:
         if card["overview"]:
             st.subheader("Company overview")
-            st.text(card["overview"])
+            for paragraph in card["overview"].split("\n\n"):
+                st.markdown(escape(paragraph), unsafe_allow_html=False)
+        if card.get("insight"):
+            st.info(card["insight"])
         a, b = st.columns(2)
         with a:
             points("Competitor challenges", card["challenges"])
@@ -312,7 +320,33 @@ def battlecards(gate, view):
                 for quote in card["testimonials"]:
                     st.text(quote)
     with features:
-        comparison(card["features"], name, "Capability")
+        section = (
+            st.radio(
+                "Product comparison",
+                ["Capabilities", "Architecture"],
+                horizontal=True,
+                key=f"compare_{selected}",
+            )
+            if card.get("architecture")
+            else "Capabilities"
+        )
+        matrix = card["features"] if section == "Capabilities" else card["architecture"]
+        query = st.text_input(
+            "Filter comparison rows",
+            placeholder="e.g. warehouse",
+            key=f"filter_{selected}",
+        )
+        filtered = [
+            row for row in matrix if query.casefold() in " ".join(row).casefold()
+        ]
+        if matrix and not filtered:
+            st.info("No comparison rows match your filter.")
+        else:
+            comparison(
+                filtered,
+                name,
+                "Capability" if section == "Capabilities" else "Dimension",
+            )
         if card.get("evidence"):
             with st.expander("Vendor documentation"):
                 for label, fact in card["evidence"].items():
@@ -323,11 +357,17 @@ def battlecards(gate, view):
                     )
     with price:
         comparison(card["pricing"], name, "Parameter")
-        points("Why MADTECH.AI wins on pricing", card["value"])
+        if card.get("edition"):
+            st.caption(
+                "July 2026 card terms. The accompanying pricing audit flags potential user licences, cloud charges, setup fees and minimum terms. Confirm the current quote with the vendor."
+            )
+        points("MADTECH.AI responses", card["value"])
     with reviews:
         data = card["reviews"]
-        if not any(data.values()):
+        if not any(data.get(k) for k in ("ratings", "likes", "concerns", "note")):
             st.caption("Customer feedback was not provided for this card.")
+        if data.get("note"):
+            st.caption(data["note"])
         if data.get("ratings"):
             st.caption(data["period"])
             columns = st.columns(len(data["ratings"]))
@@ -341,8 +381,29 @@ def battlecards(gate, view):
             points("What users like", data.get("likes", []))
         with b:
             points("What users dislike", data.get("concerns", []))
+        earlier = card.get("earlier_voice")
+        if earlier:
+            with st.expander("Earlier edition · customer feedback"):
+                st.caption(f"{earlier['period']} · {earlier['source']}")
+                points("What users liked", earlier["likes"])
+                points("Customer concerns", earlier["concerns"])
         if card.get("review_position"):
             points("MADTECH.AI response", [card["review_position"]])
+    with references:
+        st.caption(card["source"])
+        for ref in card.get("citations", []):
+            if valid_link(ref["url"]):
+                st.html(
+                    f'<p class="sd-reference"><a href="{escape(ref["url"],quote=True)}" target="_blank" rel="noopener noreferrer">{escape(ref["label"])}</a></p>'
+                )
+        if not card.get("citations") and not added:
+            st.caption(
+                "No public URLs were listed for this product in the citation companion."
+            )
+        if name in feeds() and st.button("Monitor current vendor sources"):
+            st.session_state.monitor_company = name
+            st.session_state.goto_monitor = True
+            st.rerun()
     if added:
         if st.button("Edit company data"):
             editor(card, gate, card)

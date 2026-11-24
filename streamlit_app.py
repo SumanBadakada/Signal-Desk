@@ -14,6 +14,7 @@ from pathlib import Path
 
 import streamlit as st
 
+from intelligence_ui import dashboard, monitor
 from battlecard_ui import battlecards
 from app import DATA, SCENARIO, database, enqueue, fingerprint, research
 from research import DEFAULT, LABELS
@@ -190,12 +191,20 @@ def research_overview(run):
 
 def main():
     st.html(Path(__file__).with_name("streamlit_ui.css"))
+    if st.session_state.pop("goto_monitor",False):
+        st.session_state.workspace_view="Live source monitor"
     if "open_company" in st.session_state:
         st.session_state.card_selection = st.session_state.pop("open_company")
         st.session_state.workspace_view = "Battlecard library"
     with st.sidebar:
         st.html(f'<div class="sd-brand">{wordmark()} Signal Desk</div>')
-        view = st.radio("Workspace", ["Battlecard library", "Find and add companies", "Workflow research"], key="workspace_view")
+        view = st.radio("Workspace", ["Landscape dashboard", "Battlecard library", "Live source monitor", "Find and add companies", "Workflow research"], key="workspace_view")
+    if view == "Landscape dashboard":
+        dashboard()
+        return
+    if view == "Live source monitor":
+        monitor()
+        return
     if view != "Workflow research":
         battlecards(gate, view)
         return

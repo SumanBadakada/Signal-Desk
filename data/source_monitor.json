@@ -1,0 +1,704 @@
+{
+  "AWS QuickSight": [
+    {
+      "label": "Pricing page",
+      "url": "https://aws.amazon.com/quick/quicksight/pricing/",
+      "kind": "page"
+    }
+  ],
+  "Accurate Append": [
+    {
+      "label": "Product page",
+      "url": "https://accurateappend.com/",
+      "kind": "page"
+    }
+  ],
+  "Adverity": [
+    {
+      "label": "Product page",
+      "url": "https://www.adverity.com/",
+      "kind": "page"
+    }
+  ],
+  "AgencyAnalytics": [
+    {
+      "label": "Pricing page",
+      "url": "https://agencyanalytics.com/pricing",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://agencyanalytics.com/company/about",
+      "kind": "page"
+    }
+  ],
+  "Akkio": [
+    {
+      "label": "Pricing page",
+      "url": "https://www.akkio.com/pricing",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://www.akkio.com/",
+      "kind": "page"
+    }
+  ],
+  "Alliant": [
+    {
+      "label": "Product page",
+      "url": "https://alliantinsight.com/solutions/audience-targeting/",
+      "kind": "page"
+    }
+  ],
+  "Association Analytics (Acumen)": [
+    {
+      "label": "Product page",
+      "url": "https://www.associationanalytics.com/",
+      "kind": "page"
+    }
+  ],
+  "Audience Republic": [
+    {
+      "label": "Pricing page",
+      "url": "https://www.audiencerepublic.com/pricing",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://audiencerepublic.com/",
+      "kind": "page"
+    }
+  ],
+  "BWF (Groundwork)": [
+    {
+      "label": "Product page",
+      "url": "https://www.bwf.com/",
+      "kind": "page"
+    }
+  ],
+  "Bloomerang": [
+    {
+      "label": "Product page",
+      "url": "https://bloomerang.com/",
+      "kind": "page"
+    }
+  ],
+  "Boomi AI": [
+    {
+      "label": "Pricing page",
+      "url": "https://boomi.com/pricing/",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://boomi.com/",
+      "kind": "page"
+    }
+  ],
+  "Celigo": [
+    {
+      "label": "Product page",
+      "url": "https://www.celigo.com/platform/",
+      "kind": "page"
+    }
+  ],
+  "Civis Analytics": [
+    {
+      "label": "Product page",
+      "url": "https://www.civisanalytics.com/",
+      "kind": "page"
+    }
+  ],
+  "Cuseum": [
+    {
+      "label": "Product page",
+      "url": "https://cuseum.com/",
+      "kind": "page"
+    }
+  ],
+  "DashThis": [
+    {
+      "label": "Pricing page",
+      "url": "https://dashthis.com/pricing/",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://dashthis.com/",
+      "kind": "page"
+    }
+  ],
+  "Data Axle": [
+    {
+      "label": "Product page",
+      "url": "https://www.data-axle.com/",
+      "kind": "page"
+    }
+  ],
+  "Databox": [
+    {
+      "label": "Pricing page",
+      "url": "https://databox.com/pricing",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://databox.com/",
+      "kind": "page"
+    }
+  ],
+  "Dataro": [
+    {
+      "label": "Product page",
+      "url": "https://dataro.io/",
+      "kind": "page"
+    }
+  ],
+  "Datuum": [
+    {
+      "label": "Product page",
+      "url": "https://datuum.ai/",
+      "kind": "page"
+    }
+  ],
+  "Dexibit": [
+    {
+      "label": "Pricing page",
+      "url": "https://dexibit.com/pricing/",
+      "kind": "page"
+    }
+  ],
+  "DonorSearch": [
+    {
+      "label": "Product page",
+      "url": "https://www.donorsearch.net/",
+      "kind": "page"
+    }
+  ],
+  "Donor Bureau": [
+    {
+      "label": "Product page",
+      "url": "https://donorbureau.com/",
+      "kind": "page"
+    }
+  ],
+  "DynamO Pricing": [
+    {
+      "label": "Product page",
+      "url": "https://www.dynamopricing.com/",
+      "kind": "page"
+    }
+  ],
+  "Fieldstream": [
+    {
+      "label": "Product page",
+      "url": "https://www.fieldstream.ai/our-platform",
+      "kind": "page"
+    }
+  ],
+  "Fonteva": [
+    {
+      "label": "Product page",
+      "url": "https://www.fonteva.com/",
+      "kind": "page"
+    }
+  ],
+  "Funnel io": [
+    {
+      "label": "Pricing page",
+      "url": "https://funnel.io/pricing",
+      "kind": "page"
+    }
+  ],
+  "Fuse AI": [
+    {
+      "label": "Pricing page",
+      "url": "https://tryfuse.ai/pricing",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://tryfuse.ai/",
+      "kind": "page"
+    }
+  ],
+  "Geckoboard": [
+    {
+      "label": "Pricing page",
+      "url": "https://www.geckoboard.com/pricing/",
+      "kind": "page"
+    }
+  ],
+  "Givebutter": [
+    {
+      "label": "Pricing page",
+      "url": "https://givebutter.com/pricing",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://givebutter.com/",
+      "kind": "page"
+    }
+  ],
+  "GrowthLoop": [
+    {
+      "label": "Pricing page",
+      "url": "https://www.growthloop.com/pricing",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://www.growthloop.com/",
+      "kind": "page"
+    }
+  ],
+  "Haus": [
+    {
+      "label": "Product page",
+      "url": "https://www.haus.io/",
+      "kind": "page"
+    }
+  ],
+  "Heller Consulting": [
+    {
+      "label": "Product page",
+      "url": "https://teamheller.com/",
+      "kind": "page"
+    }
+  ],
+  "Ignite Procurement": [
+    {
+      "label": "Product page",
+      "url": "https://www.igniteprocurement.com/",
+      "kind": "page"
+    }
+  ],
+  "Improvado": [
+    {
+      "label": "Product page",
+      "url": "https://improvado.io/",
+      "kind": "page"
+    }
+  ],
+  "JCA": [
+    {
+      "label": "Product page",
+      "url": "https://www.jcainc.com/",
+      "kind": "page"
+    }
+  ],
+  "Keboola": [
+    {
+      "label": "Pricing page",
+      "url": "https://www.keboola.com/pricing",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://www.keboola.com/",
+      "kind": "page"
+    }
+  ],
+  "Keela": [
+    {
+      "label": "Pricing page",
+      "url": "https://www.keela.co/pricing",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://www.keela.co/",
+      "kind": "page"
+    }
+  ],
+  "Keen Decision Systems": [
+    {
+      "label": "Product page",
+      "url": "https://keends.com/about/",
+      "kind": "page"
+    }
+  ],
+  "Klipfolio": [
+    {
+      "label": "Pricing page",
+      "url": "https://www.klipfolio.com/pricing",
+      "kind": "page"
+    }
+  ],
+  "Lifesight": [
+    {
+      "label": "Product page",
+      "url": "https://lifesight.io/",
+      "kind": "page"
+    }
+  ],
+  "M+R Benchmarks": [
+    {
+      "label": "Product page",
+      "url": "https://mrbenchmarks.com/",
+      "kind": "page"
+    }
+  ],
+  "Marketing General (MGI)": [
+    {
+      "label": "Product page",
+      "url": "https://www.marketinggeneral.com/",
+      "kind": "page"
+    }
+  ],
+  "Measured": [
+    {
+      "label": "Product page",
+      "url": "https://www.measured.com/",
+      "kind": "page"
+    }
+  ],
+  "Melissa Data": [
+    {
+      "label": "Pricing page",
+      "url": "https://www.melissa.com/pricing",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://www.melissa.com/data-quality",
+      "kind": "page"
+    }
+  ],
+  "Metadata.io": [
+    {
+      "label": "Product page",
+      "url": "https://metadata.io/",
+      "kind": "page"
+    }
+  ],
+  "Mozart Data": [
+    {
+      "label": "Pricing page",
+      "url": "https://mozartdata.com/pricing/",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://mozartdata.com/",
+      "kind": "page"
+    }
+  ],
+  "Muse": [
+    {
+      "label": "Product page",
+      "url": "https://www.musesoftware.ai/",
+      "kind": "page"
+    }
+  ],
+  "Mutinex": [
+    {
+      "label": "Product page",
+      "url": "https://mutinex.co/",
+      "kind": "page"
+    }
+  ],
+  "Naylor / Association Adviser": [
+    {
+      "label": "Product page",
+      "url": "https://www.naylor.com/",
+      "kind": "page"
+    }
+  ],
+  "Newton Research": [
+    {
+      "label": "Product page",
+      "url": "https://www.newtonresearch.ai/",
+      "kind": "page"
+    }
+  ],
+  "NinjaCat": [
+    {
+      "label": "Product page",
+      "url": "https://www.ninjacat.io/",
+      "kind": "page"
+    }
+  ],
+  "Octane11": [
+    {
+      "label": "Pricing page",
+      "url": "https://www.octane11.com/pricing/",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://www.octane11.com/",
+      "kind": "page"
+    }
+  ],
+  "Omatic": [
+    {
+      "label": "Product page",
+      "url": "https://omaticsoftware.com/",
+      "kind": "page"
+    }
+  ],
+  "Panamplify": [
+    {
+      "label": "Product page",
+      "url": "https://panamplify.com/solution.html",
+      "kind": "page"
+    }
+  ],
+  "Path2Response": [
+    {
+      "label": "Product page",
+      "url": "https://path2response.com/",
+      "kind": "page"
+    }
+  ],
+  "Power BI": [
+    {
+      "label": "Power BI JavaScript client",
+      "url": "https://registry.npmjs.org/powerbi-client/latest",
+      "kind": "release"
+    },
+    {
+      "label": "Pricing page",
+      "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi/pricing",
+      "kind": "page"
+    }
+  ],
+  "Recast": [
+    {
+      "label": "Product page",
+      "url": "https://getrecast.com/",
+      "kind": "page"
+    }
+  ],
+  "Salesforce Marketing Intelligence": [
+    {
+      "label": "Pricing page",
+      "url": "https://www.salesforce.com/editions-pricing/marketing-cloud/",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://www.salesforce.com/marketing/analytics/",
+      "kind": "page"
+    }
+  ],
+  "Salesforce Nonprofit Cloud": [
+    {
+      "label": "Pricing page",
+      "url": "https://www.salesforce.com/nonprofit/pricing/",
+      "kind": "page"
+    }
+  ],
+  "Sidekick Solutions LLC": [
+    {
+      "label": "Product page",
+      "url": "https://www.sidekicksolutions.com/",
+      "kind": "page"
+    }
+  ],
+  "Singular": [
+    {
+      "label": "Product page",
+      "url": "https://www.singular.net/",
+      "kind": "page"
+    }
+  ],
+  "Sogolytics": [
+    {
+      "label": "Pricing page",
+      "url": "https://www.sogolytics.com/pricing/",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://www.sogolytics.com/",
+      "kind": "page"
+    }
+  ],
+  "Stitch": [
+    {
+      "label": "Pricing page",
+      "url": "https://www.stitchdata.com/pricing/",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://www.stitchdata.com/",
+      "kind": "page"
+    }
+  ],
+  "Supermetrics": [
+    {
+      "label": "Product page",
+      "url": "https://supermetrics.com/",
+      "kind": "page"
+    }
+  ],
+  "Tableau": [
+    {
+      "label": "Tableau Server Client SDK",
+      "url": "https://pypi.org/pypi/tableauserverclient/json",
+      "kind": "release"
+    },
+    {
+      "label": "Pricing page",
+      "url": "https://www.tableau.com/pricing",
+      "kind": "page"
+    }
+  ],
+  "TapClicks": [
+    {
+      "label": "Pricing page",
+      "url": "https://www.tapclicks.com/pricing",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://www.tapclicks.com/",
+      "kind": "page"
+    }
+  ],
+  "The Digital Co-Op": [
+    {
+      "label": "Product page",
+      "url": "https://thedigitalco-op.com/",
+      "kind": "page"
+    }
+  ],
+  "Tixly": [
+    {
+      "label": "Pricing page",
+      "url": "https://tixly.com/product/pricing",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://tixly.com/product",
+      "kind": "page"
+    }
+  ],
+  "Triple Whale": [
+    {
+      "label": "Product page",
+      "url": "https://www.triplewhale.com/",
+      "kind": "page"
+    }
+  ],
+  "VeraData": [
+    {
+      "label": "Product page",
+      "url": "https://www.veradata.com/",
+      "kind": "page"
+    }
+  ],
+  "Virtuous": [
+    {
+      "label": "Pricing page",
+      "url": "https://virtuous.org/pricing/",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://virtuous.org/",
+      "kind": "page"
+    }
+  ],
+  "WealthEngine": [
+    {
+      "label": "Product page",
+      "url": "https://wealthengine.com/",
+      "kind": "page"
+    }
+  ],
+  "Whatagraph": [
+    {
+      "label": "Pricing page",
+      "url": "https://whatagraph.com/pricing",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://whatagraph.com/",
+      "kind": "page"
+    }
+  ],
+  "Wiland": [
+    {
+      "label": "Product page",
+      "url": "https://wiland.com/",
+      "kind": "page"
+    }
+  ],
+  "Wisely by Gravyty": [
+    {
+      "label": "Product page",
+      "url": "https://gravyty.com/",
+      "kind": "page"
+    }
+  ],
+  "Zapier": [
+    {
+      "label": "Zapier Platform Core",
+      "url": "https://registry.npmjs.org/zapier-platform-core/latest",
+      "kind": "release"
+    },
+    {
+      "label": "Pricing page",
+      "url": "https://zapier.com/pricing",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://zapier.com/",
+      "kind": "page"
+    }
+  ],
+  "Zoho Marketing Plus": [
+    {
+      "label": "Pricing page",
+      "url": "https://www.zoho.com/marketingplus/pricing.html",
+      "kind": "page"
+    },
+    {
+      "label": "Product page",
+      "url": "https://www.zoho.com/marketingplus/",
+      "kind": "page"
+    }
+  ],
+  "iMIS": [
+    {
+      "label": "Product page",
+      "url": "https://www.imis.com/",
+      "kind": "page"
+    }
+  ],
+  "integrate.io": [
+    {
+      "label": "Product page",
+      "url": "https://www.integrate.io/",
+      "kind": "page"
+    }
+  ],
+  "Fivetran": [
+    {
+      "label": "Connector SDK",
+      "url": "https://pypi.org/pypi/fivetran-connector-sdk/json",
+      "kind": "release"
+    }
+  ],
+  "MADTECH.AI": [
+    {
+      "label": "Pricing page",
+      "url": "https://madtech.ai/plans-and-pricing/",
+      "kind": "page"
+    },
+    {
+      "label": "iPaaS product page",
+      "url": "https://madtech.ai/ipaas/",
+      "kind": "page"
+    }
+  ]
+}

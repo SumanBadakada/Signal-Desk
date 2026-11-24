@@ -17,4 +17,6 @@ Discovery reads the Cloud Services section of Awesome ETL. Evidence checks use s
 
 The versioned API is documented at `/docs`. SQLite stores runs, source snapshots, and reviews in `.signal-data/` (override with `SIGNAL_DATA`). A background worker resumes interrupted runs. Use Python 3.11+ on Linux or macOS. Use locally or behind authenticated internal access before sharing.
 
-Run the public battlecard library with `streamlit run streamlit_app.py`. **Find and add companies** searches public directories or accepts a manually sourced card. The 40 supplied comparisons are bundled with the app. Added cards use the workspace SQLite database and can be downloaded as JSON. Use persistent storage to retain additions across host resets.
+Run the public battlecard library with `streamlit run streamlit_app.py`. **Find and add companies** searches public directories or accepts a manually sourced card. The supplied comparisons are bundled with the app. Added cards use the workspace SQLite database and can be downloaded as JSON. Use persistent storage to retain additions across host resets.
+
+The landscape dashboard aggregates the refreshed July 2026 cards. In **Live source monitor**, choose a product and refresh now or enable five-minute checks while the view is open. Product-page excerpts and SDK versions have separate timestamps and history in SQLite. Ratings and commercial claims retain their source date.
