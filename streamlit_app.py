@@ -14,6 +14,7 @@ from pathlib import Path
 
 import streamlit as st
 
+from chat_ui import chat
 from intelligence_ui import dashboard, monitor
 from battlecard_ui import battlecards
 from app import DATA, SCENARIO, database, enqueue, fingerprint, research
@@ -198,7 +199,10 @@ def main():
         st.session_state.workspace_view = "Battlecard library"
     with st.sidebar:
         st.html(f'<div class="sd-brand">{wordmark()} Signal Desk</div>')
-        view = st.radio("Workspace", ["Landscape dashboard", "Battlecard library", "Live source monitor", "Find and add companies", "Workflow research"], key="workspace_view")
+        view = st.radio("Workspace", ["Landscape dashboard", "Ask Signal Desk", "Battlecard library", "Live source monitor", "Find and add companies", "Workflow research"], key="workspace_view")
+    if view == "Ask Signal Desk":
+        chat()
+        return
     if view == "Landscape dashboard":
         dashboard()
         return
